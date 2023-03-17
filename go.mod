@@ -1,6 +1,6 @@
 // This is a generated file. Do not edit directly.
 
-module k8s.io/client-go
+module github.com/leigme/client-go-trace
 
 go 1.16
 
