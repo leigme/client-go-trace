@@ -19,12 +19,12 @@ limitations under the License.
 package install
 
 import (
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication/v1"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication/v1alpha1"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	"k8s.io/client-go/pkg/apis/clientauthentication/v1"
-	"k8s.io/client-go/pkg/apis/clientauthentication/v1alpha1"
-	"k8s.io/client-go/pkg/apis/clientauthentication/v1beta1"
 )
 
 // Install registers the API group and adds types to a scheme

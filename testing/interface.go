@@ -17,9 +17,9 @@ limitations under the License.
 package testing
 
 import (
+	restclient "github.com/leigme/client-go-trace/rest"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
-	restclient "k8s.io/client-go/rest"
 )
 
 type FakeClient interface {

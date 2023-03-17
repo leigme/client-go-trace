@@ -28,9 +28,9 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	certificatesv1beta1 "k8s.io/client-go/applyconfigurations/certificates/v1beta1"
-	scheme "k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
+	certificatesv1beta1 "github.com/leigme/client-go-trace/applyconfigurations/certificates/v1beta1"
+	scheme "github.com/leigme/client-go-trace/kubernetes/scheme"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 // CertificateSigningRequestsGetter has a method to return a CertificateSigningRequestInterface.

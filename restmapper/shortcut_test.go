@@ -21,14 +21,14 @@ import (
 
 	openapi_v2 "github.com/googleapis/gnostic/openapiv2"
 
+	"github.com/leigme/client-go-trace/discovery"
+	restclient "github.com/leigme/client-go-trace/rest"
+	"github.com/leigme/client-go-trace/rest/fake"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/version"
-	"k8s.io/client-go/discovery"
-	restclient "k8s.io/client-go/rest"
-	"k8s.io/client-go/rest/fake"
 )
 
 func TestReplaceAliases(t *testing.T) {

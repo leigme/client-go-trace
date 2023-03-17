@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"testing"
 
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
+	clientcmdapi "github.com/leigme/client-go-trace/tools/clientcmd/api"
 )
 
 func TestAuthPluginWrapTransport(t *testing.T) {

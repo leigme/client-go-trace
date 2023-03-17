@@ -25,7 +25,7 @@ import (
 	v1beta1 "k8s.io/api/apps/v1beta1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	scheme "k8s.io/client-go/scale/scheme"
+	scheme "github.com/leigme/client-go-trace/scale/scheme"
 )
 
 func init() {

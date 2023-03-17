@@ -28,12 +28,12 @@ import (
 	openapi_v2 "github.com/googleapis/gnostic/openapiv2"
 	"k8s.io/klog/v2"
 
+	"github.com/leigme/client-go-trace/discovery"
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	restclient "github.com/leigme/client-go-trace/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/version"
-	"k8s.io/client-go/discovery"
-	"k8s.io/client-go/kubernetes/scheme"
-	restclient "k8s.io/client-go/rest"
 )
 
 // CachedDiscoveryClient implements the functions that discovery server-supported API groups,

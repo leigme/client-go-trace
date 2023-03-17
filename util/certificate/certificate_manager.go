@@ -31,15 +31,15 @@ import (
 
 	"k8s.io/klog/v2"
 
+	clientset "github.com/leigme/client-go-trace/kubernetes"
+	"github.com/leigme/client-go-trace/util/cert"
+	"github.com/leigme/client-go-trace/util/certificate/csr"
+	"github.com/leigme/client-go-trace/util/keyutil"
 	certificates "k8s.io/api/certificates/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/wait"
-	clientset "k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/util/cert"
-	"k8s.io/client-go/util/certificate/csr"
-	"k8s.io/client-go/util/keyutil"
 )
 
 // certificateWaitTimeout controls the amount of time we wait for certificate

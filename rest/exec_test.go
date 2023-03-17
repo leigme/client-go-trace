@@ -27,12 +27,12 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	fuzz "github.com/google/gofuzz"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	clientauthenticationapi "github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	clientcmdapi "github.com/leigme/client-go-trace/tools/clientcmd/api"
+	"github.com/leigme/client-go-trace/transport"
+	"github.com/leigme/client-go-trace/util/flowcontrol"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	clientauthenticationapi "k8s.io/client-go/pkg/apis/clientauthentication"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
-	"k8s.io/client-go/util/flowcontrol"
 )
 
 func TestConfigToExecCluster(t *testing.T) {

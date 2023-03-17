@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	v1 "k8s.io/client-go/kubernetes/typed/coordination/v1"
-	rest "k8s.io/client-go/rest"
-	testing "k8s.io/client-go/testing"
+	v1 "github.com/leigme/client-go-trace/kubernetes/typed/coordination/v1"
+	rest "github.com/leigme/client-go-trace/rest"
+	testing "github.com/leigme/client-go-trace/testing"
 )
 
 type FakeCoordinationV1 struct {

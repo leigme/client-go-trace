@@ -28,9 +28,9 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	corev1 "k8s.io/client-go/applyconfigurations/core/v1"
-	scheme "k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
+	corev1 "github.com/leigme/client-go-trace/applyconfigurations/core/v1"
+	scheme "github.com/leigme/client-go-trace/kubernetes/scheme"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 // NamespacesGetter has a method to return a NamespaceInterface.

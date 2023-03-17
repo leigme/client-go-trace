@@ -21,15 +21,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/leigme/client-go-trace/dynamic"
+	"github.com/leigme/client-go-trace/dynamic/dynamiclister"
+	"github.com/leigme/client-go-trace/informers"
+	"github.com/leigme/client-go-trace/tools/cache"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/dynamic"
-	"k8s.io/client-go/dynamic/dynamiclister"
-	"k8s.io/client-go/informers"
-	"k8s.io/client-go/tools/cache"
 )
 
 // NewDynamicSharedInformerFactory constructs a new instance of dynamicSharedInformerFactory for all namespaces.

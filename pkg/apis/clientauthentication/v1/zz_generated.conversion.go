@@ -27,7 +27,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	clientauthentication "k8s.io/client-go/pkg/apis/clientauthentication"
+	clientauthentication "github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
 )
 
 func init() {

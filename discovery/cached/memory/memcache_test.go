@@ -23,9 +23,9 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/leigme/client-go-trace/discovery/fake"
 	errorsutil "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/discovery/fake"
 )
 
 type resourceMapEntry struct {

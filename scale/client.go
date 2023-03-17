@@ -20,14 +20,14 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/leigme/client-go-trace/dynamic"
+	restclient "github.com/leigme/client-go-trace/rest"
 	autoscaling "k8s.io/api/autoscaling/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/apimachinery/pkg/types"
-	"k8s.io/client-go/dynamic"
-	restclient "k8s.io/client-go/rest"
 )
 
 var scaleConverter = NewScaleConverter()

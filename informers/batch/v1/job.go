@@ -26,10 +26,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
-	internalinterfaces "k8s.io/client-go/informers/internalinterfaces"
-	kubernetes "k8s.io/client-go/kubernetes"
-	v1 "k8s.io/client-go/listers/batch/v1"
-	cache "k8s.io/client-go/tools/cache"
+	internalinterfaces "github.com/leigme/client-go-trace/informers/internalinterfaces"
+	kubernetes "github.com/leigme/client-go-trace/kubernetes"
+	v1 "github.com/leigme/client-go-trace/listers/batch/v1"
+	cache "github.com/leigme/client-go-trace/tools/cache"
 )
 
 // JobInformer provides access to a shared informer and lister for

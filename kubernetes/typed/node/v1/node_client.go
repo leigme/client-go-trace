@@ -20,8 +20,8 @@ package v1
 
 import (
 	v1 "k8s.io/api/node/v1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 type NodeV1Interface interface {

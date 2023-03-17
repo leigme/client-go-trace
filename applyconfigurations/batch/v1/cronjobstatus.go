@@ -20,7 +20,7 @@ package v1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	v1 "k8s.io/client-go/applyconfigurations/core/v1"
+	v1 "github.com/leigme/client-go-trace/applyconfigurations/core/v1"
 )
 
 // CronJobStatusApplyConfiguration represents an declarative configuration of the CronJobStatus type for use

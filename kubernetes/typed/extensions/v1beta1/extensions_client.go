@@ -20,8 +20,8 @@ package v1beta1
 
 import (
 	v1beta1 "k8s.io/api/extensions/v1beta1"
-	"k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 type ExtensionsV1beta1Interface interface {

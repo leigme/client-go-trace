@@ -59,12 +59,12 @@ import (
 	"sync"
 	"time"
 
+	rl "github.com/leigme/client-go-trace/tools/leaderelection/resourcelock"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/clock"
 	"k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
-	rl "k8s.io/client-go/tools/leaderelection/resourcelock"
 
 	"k8s.io/klog/v2"
 )

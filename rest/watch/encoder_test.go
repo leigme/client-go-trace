@@ -21,6 +21,8 @@ import (
 	"io/ioutil"
 	"testing"
 
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	restclientwatch "github.com/leigme/client-go-trace/rest/watch"
 	"k8s.io/api/core/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -28,11 +30,9 @@ import (
 	runtimejson "k8s.io/apimachinery/pkg/runtime/serializer/json"
 	"k8s.io/apimachinery/pkg/runtime/serializer/streaming"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/kubernetes/scheme"
-	restclientwatch "k8s.io/client-go/rest/watch"
 )
 
-// getEncoder mimics how k8s.io/client-go/rest.createSerializers creates a encoder
+// getEncoder mimics how github.com/leigme/client-go-trace/rest.createSerializers creates a encoder
 func getEncoder() runtime.Encoder {
 	jsonSerializer := runtimejson.NewSerializer(runtimejson.DefaultMetaFactory, scheme.Scheme, scheme.Scheme, false)
 	directCodecFactory := scheme.Codecs.WithoutConversion()

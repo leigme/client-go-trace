@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"k8s.io/client-go/util/flowcontrol"
+	"github.com/leigme/client-go-trace/util/flowcontrol"
 )
 
 func parse(raw string) *url.URL {

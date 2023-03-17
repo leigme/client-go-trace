@@ -22,14 +22,14 @@ configurations that are used to constructs Server-side Apply requests.
 
 # Basics
 
-The Apply functions in the typed client (see the k8s.io/client-go/kubernetes/typed packages) offer
+The Apply functions in the typed client (see the github.com/leigme/client-go-trace/kubernetes/typed packages) offer
 a direct and typesafe way of calling Server-side Apply. Each Apply function takes an "apply
 configuration" type as an argument, which is a structured representation of an Apply request. For
 example:
 
 	import (
 	     ...
-	     v1ac "k8s.io/client-go/applyconfigurations/autoscaling/v1"
+	     v1ac "github.com/leigme/client-go-trace/applyconfigurations/autoscaling/v1"
 	)
 	hpaApplyConfig := v1ac.HorizontalPodAutoscaler(autoscalerName, ns).
 	     WithSpec(v1ac.HorizontalPodAutoscalerSpec().

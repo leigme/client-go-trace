@@ -19,9 +19,9 @@ package fake
 import (
 	"context"
 
+	core "github.com/leigme/client-go-trace/testing"
 	"k8s.io/api/extensions/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	core "k8s.io/client-go/testing"
 )
 
 func (c *FakeDeployments) Rollback(ctx context.Context, deploymentRollback *v1beta1.DeploymentRollback, opts metav1.CreateOptions) error {

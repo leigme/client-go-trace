@@ -25,6 +25,10 @@ import (
 	"reflect"
 	"time"
 
+	clientset "github.com/leigme/client-go-trace/kubernetes"
+	"github.com/leigme/client-go-trace/tools/cache"
+	watchtools "github.com/leigme/client-go-trace/tools/watch"
+	certutil "github.com/leigme/client-go-trace/util/cert"
 	certificatesv1 "k8s.io/api/certificates/v1"
 	certificatesv1beta1 "k8s.io/api/certificates/v1beta1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -35,10 +39,6 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	clientset "k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/tools/cache"
-	watchtools "k8s.io/client-go/tools/watch"
-	certutil "k8s.io/client-go/util/cert"
 	"k8s.io/klog/v2"
 	"k8s.io/utils/pointer"
 )

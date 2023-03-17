@@ -21,11 +21,11 @@ import (
 	"k8s.io/klog/v2"
 	"time"
 
+	restclient "github.com/leigme/client-go-trace/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
-	restclient "k8s.io/client-go/rest"
 )
 
 // Lister is any object that knows how to perform an initial list.

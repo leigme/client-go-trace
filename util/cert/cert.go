@@ -32,7 +32,7 @@ import (
 	"strings"
 	"time"
 
-	"k8s.io/client-go/util/keyutil"
+	"github.com/leigme/client-go-trace/util/keyutil"
 )
 
 const duration365d = time.Hour * 24 * 365

@@ -22,12 +22,12 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication/install"
+	"github.com/leigme/client-go-trace/rest"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	"k8s.io/client-go/pkg/apis/clientauthentication/install"
-	"k8s.io/client-go/rest"
 )
 
 const execInfoEnv = "KUBERNETES_EXEC_INFO"

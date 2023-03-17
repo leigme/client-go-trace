@@ -30,13 +30,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	clientcmdapi "github.com/leigme/client-go-trace/tools/clientcmd/api"
+	"github.com/leigme/client-go-trace/transport"
+	"github.com/leigme/client-go-trace/util/flowcontrol"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/client-go/kubernetes/scheme"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
-	"k8s.io/client-go/util/flowcontrol"
 
 	"github.com/google/go-cmp/cmp"
 	fuzz "github.com/google/gofuzz"

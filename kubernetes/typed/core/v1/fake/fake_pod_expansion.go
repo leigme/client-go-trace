@@ -23,14 +23,14 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	restclient "github.com/leigme/client-go-trace/rest"
+	fakerest "github.com/leigme/client-go-trace/rest/fake"
+	core "github.com/leigme/client-go-trace/testing"
 	v1 "k8s.io/api/core/v1"
 	policyv1 "k8s.io/api/policy/v1"
 	policyv1beta1 "k8s.io/api/policy/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/kubernetes/scheme"
-	restclient "k8s.io/client-go/rest"
-	fakerest "k8s.io/client-go/rest/fake"
-	core "k8s.io/client-go/testing"
 )
 
 func (c *FakePods) Bind(ctx context.Context, binding *v1.Binding, opts metav1.CreateOptions) error {

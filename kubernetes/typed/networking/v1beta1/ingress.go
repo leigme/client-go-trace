@@ -28,9 +28,9 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
-	networkingv1beta1 "k8s.io/client-go/applyconfigurations/networking/v1beta1"
-	scheme "k8s.io/client-go/kubernetes/scheme"
-	rest "k8s.io/client-go/rest"
+	networkingv1beta1 "github.com/leigme/client-go-trace/applyconfigurations/networking/v1beta1"
+	scheme "github.com/leigme/client-go-trace/kubernetes/scheme"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 // IngressesGetter has a method to return a IngressInterface.

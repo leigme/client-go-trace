@@ -21,7 +21,7 @@ package auth
 
 import (
 	// Initialize client auth plugins for cloud providers.
-	_ "k8s.io/client-go/plugin/pkg/client/auth/azure"
-	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
-	_ "k8s.io/client-go/plugin/pkg/client/auth/openstack"
+	_ "github.com/leigme/client-go-trace/plugin/pkg/client/auth/azure"
+	_ "github.com/leigme/client-go-trace/plugin/pkg/client/auth/gcp"
+	_ "github.com/leigme/client-go-trace/plugin/pkg/client/auth/openstack"
 )

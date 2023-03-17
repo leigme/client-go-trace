@@ -33,6 +33,9 @@ import (
 	"sync"
 	"time"
 
+	restclientwatch "github.com/leigme/client-go-trace/rest/watch"
+	"github.com/leigme/client-go-trace/tools/metrics"
+	"github.com/leigme/client-go-trace/util/flowcontrol"
 	"golang.org/x/net/http2"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -42,9 +45,6 @@ import (
 	utilclock "k8s.io/apimachinery/pkg/util/clock"
 	"k8s.io/apimachinery/pkg/util/net"
 	"k8s.io/apimachinery/pkg/watch"
-	restclientwatch "k8s.io/client-go/rest/watch"
-	"k8s.io/client-go/tools/metrics"
-	"k8s.io/client-go/util/flowcontrol"
 	"k8s.io/klog/v2"
 )
 

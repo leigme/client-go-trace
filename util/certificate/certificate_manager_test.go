@@ -27,6 +27,10 @@ import (
 	"testing"
 	"time"
 
+	clientset "github.com/leigme/client-go-trace/kubernetes"
+	"github.com/leigme/client-go-trace/kubernetes/fake"
+	certificatesclient "github.com/leigme/client-go-trace/kubernetes/typed/certificates/v1beta1"
+	clienttesting "github.com/leigme/client-go-trace/testing"
 	certificatesv1 "k8s.io/api/certificates/v1"
 	certificatesv1beta1 "k8s.io/api/certificates/v1beta1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -34,10 +38,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	watch "k8s.io/apimachinery/pkg/watch"
-	clientset "k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/kubernetes/fake"
-	certificatesclient "k8s.io/client-go/kubernetes/typed/certificates/v1beta1"
-	clienttesting "k8s.io/client-go/testing"
 )
 
 var storeCertData = newCertificateData(`-----BEGIN CERTIFICATE-----

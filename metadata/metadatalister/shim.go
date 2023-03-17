@@ -17,9 +17,9 @@ limitations under the License.
 package metadatalister
 
 import (
+	"github.com/leigme/client-go-trace/tools/cache"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/client-go/tools/cache"
 )
 
 var _ cache.GenericLister = &metadataListerShim{}

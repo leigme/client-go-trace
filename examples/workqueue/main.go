@@ -23,15 +23,15 @@ import (
 
 	"k8s.io/klog/v2"
 
+	"github.com/leigme/client-go-trace/kubernetes"
+	"github.com/leigme/client-go-trace/tools/cache"
+	"github.com/leigme/client-go-trace/tools/clientcmd"
+	"github.com/leigme/client-go-trace/util/workqueue"
 	v1 "k8s.io/api/core/v1"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/tools/cache"
-	"k8s.io/client-go/tools/clientcmd"
-	"k8s.io/client-go/util/workqueue"
 )
 
 // Controller demonstrates how to implement a controller with client-go.

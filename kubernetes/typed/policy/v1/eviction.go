@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	rest "k8s.io/client-go/rest"
+	rest "github.com/leigme/client-go-trace/rest"
 )
 
 // EvictionsGetter has a method to return a EvictionInterface.

@@ -21,8 +21,8 @@ package v1beta1
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
-	batchv1 "k8s.io/client-go/applyconfigurations/batch/v1"
-	v1 "k8s.io/client-go/applyconfigurations/meta/v1"
+	batchv1 "github.com/leigme/client-go-trace/applyconfigurations/batch/v1"
+	v1 "github.com/leigme/client-go-trace/applyconfigurations/meta/v1"
 )
 
 // JobTemplateSpecApplyConfiguration represents an declarative configuration of the JobTemplateSpec type for use

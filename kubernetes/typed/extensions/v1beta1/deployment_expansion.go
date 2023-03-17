@@ -19,9 +19,9 @@ package v1beta1
 import (
 	"context"
 
+	scheme "github.com/leigme/client-go-trace/kubernetes/scheme"
 	"k8s.io/api/extensions/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	scheme "k8s.io/client-go/kubernetes/scheme"
 )
 
 // The DeploymentExpansion interface allows manually adding extra methods to the DeploymentInterface.

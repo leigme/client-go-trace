@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	clientauthenticationapi "k8s.io/client-go/pkg/apis/clientauthentication"
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	clientauthenticationapi "github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
 )
 
 // This file contains Config logic related to exec credential plugins.

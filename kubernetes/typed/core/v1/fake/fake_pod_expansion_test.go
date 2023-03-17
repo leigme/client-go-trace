@@ -22,8 +22,8 @@ import (
 	"io"
 	"testing"
 
+	cgtesting "github.com/leigme/client-go-trace/testing"
 	corev1 "k8s.io/api/core/v1"
-	cgtesting "k8s.io/client-go/testing"
 )
 
 func TestFakePodsGetLogs(t *testing.T) {

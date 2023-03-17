@@ -37,12 +37,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/leigme/client-go-trace/pkg/apis/clientauthentication"
+	"github.com/leigme/client-go-trace/tools/clientcmd/api"
+	"github.com/leigme/client-go-trace/transport"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/clock"
-	"k8s.io/client-go/pkg/apis/clientauthentication"
-	"k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
 )
 
 var (

@@ -20,13 +20,13 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/leigme/client-go-trace/dynamic/dynamiclister"
+	"github.com/leigme/client-go-trace/tools/cache"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/client-go/dynamic/dynamiclister"
-	"k8s.io/client-go/tools/cache"
 )
 
 func TestNamespaceGetMethod(t *testing.T) {

@@ -26,6 +26,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
+	fakeclientset "github.com/leigme/client-go-trace/kubernetes/fake"
+	testcore "github.com/leigme/client-go-trace/testing"
+	"github.com/leigme/client-go-trace/tools/cache"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -33,9 +36,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/diff"
 	"k8s.io/apimachinery/pkg/watch"
-	fakeclientset "k8s.io/client-go/kubernetes/fake"
-	testcore "k8s.io/client-go/testing"
-	"k8s.io/client-go/tools/cache"
 )
 
 // TestEventProcessorExit is expected to timeout if the event processor fails
@@ -281,7 +281,7 @@ func TestNewInformerWatcher(t *testing.T) {
 // TestInformerWatcherDeletedFinalStateUnknown tests the code path when `DeleteFunc`
 // in `NewIndexerInformerWatcher` receives a `cache.DeletedFinalStateUnknown`
 // object from the underlying `DeltaFIFO`. The triggering condition is described
-// at https://github.com/kubernetes/kubernetes/blob/dc39ab2417bfddcec37be4011131c59921fdbe98/staging/src/k8s.io/client-go/tools/cache/delta_fifo.go#L736-L739.
+// at https://github.com/kubernetes/kubernetes/blob/dc39ab2417bfddcec37be4011131c59921fdbe98/staging/src/github.com/leigme/client-go-trace/tools/cache/delta_fifo.go#L736-L739.
 //
 // Code from @liggitt
 func TestInformerWatcherDeletedFinalStateUnknown(t *testing.T) {

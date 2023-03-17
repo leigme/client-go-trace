@@ -30,14 +30,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/leigme/client-go-trace/pkg/version"
+	clientcmdapi "github.com/leigme/client-go-trace/tools/clientcmd/api"
+	"github.com/leigme/client-go-trace/transport"
+	certutil "github.com/leigme/client-go-trace/util/cert"
+	"github.com/leigme/client-go-trace/util/flowcontrol"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/client-go/pkg/version"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	"k8s.io/client-go/transport"
-	certutil "k8s.io/client-go/util/cert"
-	"k8s.io/client-go/util/flowcontrol"
 	"k8s.io/klog/v2"
 )
 

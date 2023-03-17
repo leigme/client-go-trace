@@ -23,6 +23,13 @@ import (
 	"sync"
 	"time"
 
+	clientset "github.com/leigme/client-go-trace/kubernetes"
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	typedv1core "github.com/leigme/client-go-trace/kubernetes/typed/core/v1"
+	typedeventsv1 "github.com/leigme/client-go-trace/kubernetes/typed/events/v1"
+	restclient "github.com/leigme/client-go-trace/rest"
+	"github.com/leigme/client-go-trace/tools/record"
+	"github.com/leigme/client-go-trace/tools/record/util"
 	corev1 "k8s.io/api/core/v1"
 	eventsv1 "k8s.io/api/events/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -35,13 +42,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/strategicpatch"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	clientset "k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/kubernetes/scheme"
-	typedv1core "k8s.io/client-go/kubernetes/typed/core/v1"
-	typedeventsv1 "k8s.io/client-go/kubernetes/typed/events/v1"
-	restclient "k8s.io/client-go/rest"
-	"k8s.io/client-go/tools/record"
-	"k8s.io/client-go/tools/record/util"
 	"k8s.io/klog/v2"
 )
 

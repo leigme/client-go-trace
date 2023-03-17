@@ -22,6 +22,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/leigme/client-go-trace/kubernetes/scheme"
+	restclientwatch "github.com/leigme/client-go-trace/rest/watch"
 	"k8s.io/api/core/v1"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -30,11 +32,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/serializer/streaming"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/kubernetes/scheme"
-	restclientwatch "k8s.io/client-go/rest/watch"
 )
 
-// getDecoder mimics how k8s.io/client-go/rest.createSerializers creates a decoder
+// getDecoder mimics how github.com/leigme/client-go-trace/rest.createSerializers creates a decoder
 func getDecoder() runtime.Decoder {
 	jsonSerializer := runtimejson.NewSerializer(runtimejson.DefaultMetaFactory, scheme.Scheme, scheme.Scheme, false)
 	directCodecFactory := scheme.Codecs.WithoutConversion()

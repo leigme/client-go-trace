@@ -29,10 +29,10 @@ import (
 
 	"sigs.k8s.io/yaml"
 
+	clientcmdapi "github.com/leigme/client-go-trace/tools/clientcmd/api"
+	clientcmdlatest "github.com/leigme/client-go-trace/tools/clientcmd/api/latest"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/diff"
-	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
-	clientcmdlatest "k8s.io/client-go/tools/clientcmd/api/latest"
 )
 
 var (
